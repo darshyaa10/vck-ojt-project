@@ -213,7 +213,6 @@ img {
 }
 .main-content-scrollable {
     max-height: 500px;
-    /* overflow-y: auto; */
     padding-right: 15px;
     box-sizing: border-box;
     scrollbar-width: thin;
