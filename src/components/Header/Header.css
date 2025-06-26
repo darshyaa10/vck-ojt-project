@@ -1,81 +1,213 @@
-/* Header Container */
-.header1 {
-  width: 100%;
-  background: #2196f3;
-  box-shadow: 0 2px 8px rgba(33, 150, 243, 0.08);
-}
-
-/* Site Header Flex Layout */
-.site-header {
+.header-container {
   display: flex;
+  align-items:last baseline;
+  
   justify-content: space-between;
-  align-items: center;
-  padding: 18px 36px;
-  background: #2196f3;
+  padding: 0 32px;
 }
 
-/* Brand/Logo */
-.brand {
-  color: #fff;
-  font-size: 1.7rem;
+.college-name {
+  font-size: 2.5rem;
   font-weight: bold;
-  letter-spacing: 1px;
-  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #fff;
+  flex:1;
+  
+}
+.h {
+  font-size:60%;
+  font-weight:bold;
+  color:#ffff;
+  text-align:left;
+  font-family:arial;
+  text-decoration: None;;
+  
+
 }
 
-/* Navigation Links */
-.nav-links {
+
+
+.navbar {
+  margin-left: auto; /* Pushes nav to the right */
+}
+.navbar ul {
   display: flex;
-  gap: 38px;
+  gap: 32px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-/* Individual Link Styling */
-.Links {
-  color: #fff;
+.nav-link {
+  color:black;
+  text-decoration: none;
+  font-size: 1.2rem;
   font-weight: 500;
-  padding: 8px 16px;
-  border-radius: 4px;
-  font-size: 1rem;
-  transition: background 0.2s, color 0.2s;
+  padding-bottom: 4px;
+ 
 }
 
-.Links:hover {
-  background: #1769aa;
+.nav-link.active {
+  border-bottom: 3px solid #fff;
+  font-weight: bold;
+}
+
+.apply-now-btn {
+  background: #28a745;
   color: #fff;
-}
-
-/* Apply Now Button */
-.apply-btn {
-  background: #4caf50;
-  color: #fff !important;
   padding: 10px 22px;
-  border: none;
   border-radius: 6px;
   font-weight: bold;
-  font-size: 1rem;
-  cursor: pointer;
-  margin-left: 10px;
+  text-decoration: none;
+  margin-left: 32px;
   transition: background 0.2s;
-  text-align: center;
+  font-size: 1.1rem;
+}
+.apply-now-btn:hover {
+  background: #218838;
 }
 
-.apply-btn:hover {
-  background: #388e3c;
-  color: #fff;
+.header {
+  background: #0a89ff; /* or your preferred blue */
+  width: 100%;
+  height:70px;
+  top: 0;
+  left: 0;
+  z-index: 100;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .site-header {
+
+.p {
+    text-align:left;
+    font-family: 'Arial', sans-serif;
+    font-size: 36px;
+    
+}
+.nav-item {
+    text-align: right;
+    color: hsl(0, 28%, 53%);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 5px 0;
+    transition: color .3s ease, border-bottom .3s ease;
+}
+/* ...existing code... */
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 16px;
+  z-index: 20;
+}
+.hamburger span {
+  height: 10px;
+  width: 100%;
+  background: hsl(0, 0%, 100%);
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: 0.3s;
+  display: block;
+}
+.hamburger.open span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Responsive styles */
+@media (max-width: 900px) {
+  .navbar {
+    position:fixed;
+    top: 4px;
+    right: 0;
+    background:rgb(252, 245, 245);
+    width: 180px;
+    height:900px;
     flex-direction: column;
     align-items: flex-start;
-    padding: 14px 10px;
+    padding: 80px 0 24px 24px;
+    box-shadow: 0 4px 12px #0002;
+    transform: translateX(100%);
+    transition: transform 0.3s;
+    z-index: 10;
   }
-  .nav-links {
-    gap: 14px;
-    margin-top: 8px;
+  .navbar.open {
+    transform: translateX(0);
   }
-  .brand {
-    font-size: 1.2rem;
+  .navbar ul {
+    flex-direction: column;
+    gap: 18px;
   }
+  .apply-now-btn {
+    display:inline-block;
+
+  }
+  
+  .hamburger {
+    display: flex;
+  }
+}.apply-now-btn.mobile {
+  display: none;
+  margin-inline-start: 10px;
+}
+.apply-now-btn.desktop {
+  display: inline-block;
+}
+
+@media (max-width: 900px) {
+  .apply-now-btn.desktop {
+    display: none;
+  }
+  .apply-now-btn.mobile {
+    display: block;
+    margin: 24px 0 0 0;
+    width: 100%;
+    text-align: center;
+    
+  }
+}
+/* Default: white nav links for desktop */
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding-bottom: 4px;
+  transition: color 0.2s;
+}
+
+/* Hamburger/mobile: black nav links */
+@media (max-width: 900px) {
+  .navbar ul {
+    flex-direction: column;
+    gap: 18px;
+  }
+  .nav-link {
+    color: #111 !important; /* Black for mobile menu */
+  }
+}
+.nav-link {
+  color: #e3e7eb;           /* Change this to your desired color */
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding-bottom: 4px;
+  transition: color 0.2s;
+  
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: hsl(150, 12%, 97%);           /* Color on hover/active (green example) */
+  border-bottom: 3px solid #180808;
+  font-weight: bold;
 }

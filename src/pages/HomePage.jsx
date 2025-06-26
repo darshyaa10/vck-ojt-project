@@ -1,62 +1,53 @@
-import Header from "../components/Header/Header";
-import Footer  from "../components/Footer/Footer";
-import '../styles/Pages.css'
-//import "../styles/SharedPageLayout.css"; // <-- Import the new shared CSS file
-// import "../styles/HomePage.css" // <-- If you have page-specific styles, import it AFTER the shared one
+import Footer1 from "../components/Footer/Footer";
+import Header from "../components/Header/Header"
 
 const HomePage = () => {
-    return(
-         <>
-            <div className="header-wrapper">
-                <Header />
-            </div>
-            <div className="main-wrapper"> {/* Uses shared class */}
-                <div className="main-box"> {/* Uses shared class */}
-                    <div className="main-content-scrollable"> 
-                    <div className="hero-section">
-                        <img alt="Vivekanand College Campus"className="hero-banner-image" src="/images/vck.jpg" />
-                        <div className="hero-overlay-text">
-                            <h1>Welcome to Vivekanand College!</h1>
-                            <p id="para">Your journey to excellence starts here.</p>
-                            <a className="btn hero-btn" href="/admission">Apply Now!</a>
-                        </div>
+
+    return (
+    
+        <div>
+            
+            <Header/>
+                <div className="content">
+                <div style={{marginTop:'50px',maxHeight:'76vh'}} className="page-container">
+                <div class="main-content-scrollable">
+                <div className="hero-section">
+                    <img alt="vivekanand college campus" className="hero-banner-image" src="images\vck.jpg"></img>
+                    <div className="hero-overlay-text">
+                        <h1>Welcome to Vivekanand College!</h1>
+                        <p id="z">Your journey to excellence starts here</p><br></br>
+                        <a className="hero-btn" href="/admission" data-discover="true">Apply Now</a>
+
                     </div>
+                
+                </div>  
+                <p id="p">Vivekanand College is a premier educational institution dedicated to fostering academic excellence, innovation, and holistic development. Established in 1980, we have proudly served generations of students, empowering them to achieve their full potential.</p><br></br>
+                <p id="p">At Vivekanand College, we believe in a vibrant learning environment that extends beyond textbooks. Our state-of-the-art facilities, experienced faculty, and diverse student community create a unique ecosystem where curiosity thrives and future leaders are shaped.</p><br></br>
+                <h1 id="h1">Why Choose Vivekanand College?</h1>
+                <ul id="h1"><br></br>
+                    <li id="p"><strong>Legacy of Excellence:</strong> Decades of commitment to quality education.</li>
+                    <li id="p"><strong>Experienced Faculty:</strong> Learn from renowned experts and passionate educators.</li>
+                    <li id="p"><strong>Modern Facilities:</strong>Well-equipped labs, expansive library, and comfortable campus.</li>
+                    <li id="p"><strong>Holistic Development:</strong> Focus on co-curricular activities, sports, and community service.</li>
+                    <li id="p"><strong>Strong Placements:</strong> Excellent career opportunities with leading companies.</li><br></br>
+                </ul>
+                <h1 id="h1">Campus Life & Facilities</h1><br></br>
+                <img id="i"src="images/vck2.jpg"></img>
+                <img id="i"src="images/vck3.jpg"></img><br></br>
+                <p id="p">Explore our vibrant campus and state-of-the-art facilities designed to enhance your learning experience and personal growth.</p>
+                <div className="call-to-action">
+                    <p id="p">Ready to explorenour courses?</p>
+                    <a class="primary-btn" href="/Courses" data-discover="true">Explore Coureses</a>
 
 
-
-
-
-
-                    {/* <img src="../Images/viv.png" alt="VCK logo" className=""/>
-                    <h1> Welcome to Vivekanand College</h1>
-                    <p> Your journey to excellence starts from here</p> */}
-
-                    {/* Uses shared class */}
-                        <p><b>Vivekanand College</b> is a premier educational institution dedicated to fostering academic excellence, innovation,and holistic development. Established in 1980,we have proudly served generations of students, empowering them to achieve their full potential. <br /> <br /> At Vivekanand College, we believe in a vibrant learning environment that extends beyond textbooks. Our state-of-the-art facilities, experienced faculty, and diverse student community create a unique ecosystem where curiosity thrives and future leaders are shaped. </p>
-                        <h2>Why choose Vivekanand College?</h2> <hr />
-                        <ul type="circle">
-                            <li><b>Legacy of Excellence:</b> Decades of commitment to quality education.</li>
-                            <li><b>Experienced Faculty:</b> Learn from renowned experts and passionate educators.</li>
-                            <li><b>Modern Facilities:</b> Well-equipped labs, expansive library,  and comfortable campus.</li>
-                            <li><b>Holistic Development:</b> Focus on co-curicular activities, sports, and community service.</li>
-                            <li><b>Strong Placements:</b> Excellent Career oppurtunities with leading companies.</li>
-                        </ul>
-                        <h2> Campus Life & Facilities</h2> <hr />
-                        <div className="campus-images-container">
-                            <img src="../images/vck2.jpg" alt="Vivekanand College Information" className="campus-image"/>
-                            <img src="../images/vck3.jpg" alt="Vivekanand College Campus" className="campus-image"/>
-                        </div><br></br><br></br>
-                            <div className="call-to-action">
-                                 <a class="primary-btn" href="/Courses" data-discover="true">Explore Courese</a>
-                            </div>
-                    </div>
                 </div>
-            </div>
-            <div className="footer-wrapper">
-                <Footer />
-            </div>
-        </>
+                </div>
+                </div>
+                </div>
+                <Footer1/>               
+                
+        </div>
+        
     )
 }
-
 export default HomePage;
