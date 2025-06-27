@@ -1,6 +1,6 @@
 import Footer1 from "../components/Footer/Footer";
 import Header from "../components/Header/Header"
-
+import { Link } from "react-router-dom";
 const HomePage = () => {
 
     return (
@@ -9,14 +9,14 @@ const HomePage = () => {
             
             <Header/>
                 <div className="content">
-                <div style={{marginTop:'50px',maxHeight:'76vh'}} className="page-container">
-                <div class="main-content-scrollable">
+                <div style={{marginTop:'50px'}} className="page-container">
+                <div className="main-content-scrollable">
                 <div className="hero-section">
                     <img alt="vivekanand college campus" className="hero-banner-image" src="images\vck.jpg"></img>
                     <div className="hero-overlay-text">
                         <h1>Welcome to Vivekanand College!</h1>
                         <p id="z">Your journey to excellence starts here</p><br></br>
-                        <a className="hero-btn" href="/admission" data-discover="true">Apply Now</a>
+                        <Link to="/admission" className="hero-btn">Apply Now</Link>
 
                     </div>
                 
@@ -36,8 +36,8 @@ const HomePage = () => {
                 <img id="i"src="images/vck3.jpg"></img><br></br>
                 <p id="p">Explore our vibrant campus and state-of-the-art facilities designed to enhance your learning experience and personal growth.</p>
                 <div className="call-to-action">
-                    <p id="p">Ready to explorenour courses?</p>
-                    <a class="primary-btn" href="/Courses" data-discover="true">Explore Coureses</a>
+                    <p id="p">Ready to explore our courses?</p>
+                    <Link to="/Courses" className="primary-btn">Explore Courses</Link>
 
 
                 </div>

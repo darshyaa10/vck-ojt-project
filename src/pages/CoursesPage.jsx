@@ -1,12 +1,13 @@
 import Header from "../components/Header/Header";
 import Footer1 from "../components/Footer/Footer";
+import { Link } from "react-router-dom";
 const CoursesPage = () => {
     return (
         <div>
             <Header />
             <div className="content">
                 <div className="page-container">
-                    <div class="main-content-scrollable">
+                    <div className="main-content-scrollable">
                     <div className="hero-section">
                         <h1 id="h2">Our Academic Programs</h1>
                         <br />
@@ -110,9 +111,9 @@ const CoursesPage = () => {
                         <div className="call-to-action">
                             <p id="p">Have questions about a specific course?</p>
                             <br />
-                            <a className="primary-btn" href="/Contact" data-discover="true">
+                            <Link to="/Contact" className="primary-btn"  data-discover="true">
                             Inquire About Courses
-                            </a>
+                            </Link>
                     </div>  </div>
                     </div>
                 </div>
