@@ -7,11 +7,29 @@ import PGAdmissionPage from "./pages/PGAdmissionPage";
 
 import './styles/Pages.css' 
 import ChatbotComponent from "./components/Chatbot/ChatbotComponent";
+import DeveloperInfoPopup from "./components/DeveloperInfo/DeveloperInfoPopup";
+import { useState } from "react";
 
   const App = () => {
+    const [showPopup, setShowPopup] = useState(true);
+    const handleClosePopup = () => {
+    setShowPopup(false);
+  };
 
 
     return (
+      <>
+      <div>
+        {/* Your main application content */}
+        <DeveloperInfoPopup
+          show={showPopup}
+          onClose={handleClosePopup}
+          studentName="Darshan Dadaso Hegale"
+          studentPhotoUrl="/images/darshyaa.jpg" // Path to their photo
+          uniqueMessage="Learned so much during this OJT! This app showcases my independent coding and deployment skills"
+        />
+      </div>
+      
       <div>
         <Router>
           <Routes>
@@ -26,6 +44,7 @@ import ChatbotComponent from "./components/Chatbot/ChatbotComponent";
         </Router>
 
       </div>
+      </>
 
 
     )
